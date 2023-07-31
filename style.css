@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.rootReactVNB{
+ display: none;
+}
+#body12345{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    color: white;
+}
+
+svg{
+ position: absolute;
+ width: 400px;
+ fill: none;
+ color: white;
+}
+
+
+svg:nth-child(2){
+ filter: blur(30px);
+}
+
+
+svg path{
+  d: path("M0,25,C150,110 150,-60 300,25");
+  stroke: #ff0092;
+  stroke-width: 50;
+  stroke-linecap: round;
+  transform: translate(50px,50%);
+  animation: animate 2s ease-in-out infinite;
+}
+
+
+
+ .text-on-svg-container {
+    d: path("M0,25,C150,110 150,-60 300,25");
+    stroke: #ff0092;
+    stroke-width: 50;
+    stroke-linecap: round;
+    transform: translate(50px, 50%);
+    animation: animate 2s ease-in-out infinite;
+}
+
+
+@keyframes animate {
+    0%{
+        stroke: #ff0092;
+        d: path("M0,25,C150,110 150,-60 300,25");
+    }
+    50%{
+        stroke: #00ff00;
+        d: path("M0,25,C160,-50 140,110 300,25");
+    }
+}
+
+
+svg:nth-child(1)::before{
+    content: "ggggg";
+    color: red;
+    font-size: 200px;
+  }
